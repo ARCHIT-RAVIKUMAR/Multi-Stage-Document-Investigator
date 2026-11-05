@@ -1,0 +1,21 @@
+{
+  "contradictions": [
+    {"id": "C1", "topic": "outage start time", "values": ["02:14", "02:41"], "any_of": [["02:14", "02:41"]]},
+    {"id": "C2", "topic": "restoration time", "values": ["06:34", "08:05"], "any_of": [["06:34", "08:05"]]},
+    {"id": "C3", "topic": "customers affected", "values": ["312", "213"], "any_of": [["312", "213"]]},
+    {"id": "C4", "topic": "failover approver", "values": ["priya raman", "daniel okafor"], "any_of": [["priya", "daniel"]]},
+    {"id": "C5", "topic": "UPS runtime", "values": ["15 minutes", "9 minutes"], "any_of": [["ups", "15", "9 min"], ["battery", "15", "9 min"]]},
+    {"id": "C6", "topic": "Generator B fuel", "values": ["11 hours", "3 hours"], "any_of": [["11 hour", "3 hour"], ["11 hour", "20"]]},
+    {"id": "C7", "topic": "cause: storm vs clear weather", "values": ["storm"], "any_of": [["storm", "clear"], ["storm", "weather"], ["storm", "transformer"]]},
+    {"id": "C8", "topic": "premium customers", "values": ["41", "38"], "any_of": [["41", "38"]]}
+  ],
+  "forbidden_established_claims": [
+    "data (was|were) (lost|corrupted)", "no data (was |were )?lost", "root cause (was|is) (a |the )?(storm|transformer)",
+    "transformer failure (was )?caused", "lightning"
+  ],
+  "unanswerable_questions": [
+    "What caused the Substation 7 transformer failure?",
+    "Was any customer data lost?",
+    "Was there any SLA credit or financial penalty?"
+  ]
+}

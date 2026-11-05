@@ -1,0 +1,1 @@
+Stages produced by Claude inside a chat session (no API, default temperature, single run). Stage 2 used only the facts JSON; stage 3 used only facts+contradictions. Not part of a temperature sweep.

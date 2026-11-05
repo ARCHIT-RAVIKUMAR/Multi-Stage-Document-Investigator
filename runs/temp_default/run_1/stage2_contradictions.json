@@ -1,0 +1,86 @@
+{
+  "contradictions": [
+    {
+      "id": "X1",
+      "fact_ids": [
+        "F1",
+        "F10"
+      ],
+      "topic": "outage start time",
+      "description": "F1 says power was lost at 02:14 but F10 timeline shows the alarm at 02:41",
+      "confidence": "high"
+    },
+    {
+      "id": "X2",
+      "fact_ids": [
+        "F3",
+        "F15",
+        "F4"
+      ],
+      "topic": "restoration time",
+      "description": "F3 says service restored at 06:34 (4h20m outage per F4) but F15 says utility feed restored at 08:05",
+      "confidence": "high"
+    },
+    {
+      "id": "X3",
+      "fact_ids": [
+        "F5",
+        "F19"
+      ],
+      "topic": "customers affected",
+      "description": "F5 says 312 customers affected but F19 says 213",
+      "confidence": "high"
+    },
+    {
+      "id": "X4",
+      "fact_ids": [
+        "F6",
+        "F12"
+      ],
+      "topic": "failover approver",
+      "description": "F6 says Priya Raman approved the failover but F12 says Daniel Okafor",
+      "confidence": "high"
+    },
+    {
+      "id": "X5",
+      "fact_ids": [
+        "F2",
+        "F11"
+      ],
+      "topic": "UPS runtime",
+      "description": "F2 says the UPS carried the load for 15 minutes but F11 says 9 minutes (F17 is only the rating, not a conflict)",
+      "confidence": "high"
+    },
+    {
+      "id": "X6",
+      "fact_ids": [
+        "F18",
+        "F21"
+      ],
+      "topic": "Generator B fuel",
+      "description": "F18 says roughly 11 hours of runtime but F21 says 20 percent, about 3 hours",
+      "confidence": "high"
+    },
+    {
+      "id": "X7",
+      "fact_ids": [
+        "F7",
+        "F23",
+        "F24"
+      ],
+      "topic": "cause: storm vs clear weather",
+      "description": "F7 says a storm triggered the fault but F23 says clear skies and F24 says a transformer failure at Substation 7",
+      "confidence": "medium"
+    },
+    {
+      "id": "X8",
+      "fact_ids": [
+        "F19",
+        "F25"
+      ],
+      "topic": "premium customers",
+      "description": "F19 says 41 premium customers but F25 says 38",
+      "confidence": "high"
+    }
+  ]
+}

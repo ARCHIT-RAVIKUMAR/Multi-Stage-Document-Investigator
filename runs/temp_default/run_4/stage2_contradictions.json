@@ -1,0 +1,96 @@
+{
+  "contradictions": [
+    {
+      "id": "X1",
+      "fact_ids": [
+        "F1",
+        "F11"
+      ],
+      "topic": "outage start time",
+      "description": "F1 says 02:14 but F11 says 02:41",
+      "confidence": "high"
+    },
+    {
+      "id": "X2",
+      "fact_ids": [
+        "F3",
+        "F4",
+        "F16"
+      ],
+      "topic": "restoration time",
+      "description": "F3 (and F4, 4h20m) conflicts with F16 which says restoration at 08:05",
+      "confidence": "high"
+    },
+    {
+      "id": "X3",
+      "fact_ids": [
+        "F5",
+        "F20"
+      ],
+      "topic": "customers affected",
+      "description": "F5 says 312 but F20 says 213",
+      "confidence": "high"
+    },
+    {
+      "id": "X4",
+      "fact_ids": [
+        "F6",
+        "F13"
+      ],
+      "topic": "failover approver",
+      "description": "F6 says Priya Raman approved but F13 says Daniel Okafor",
+      "confidence": "high"
+    },
+    {
+      "id": "X5",
+      "fact_ids": [
+        "F2",
+        "F12"
+      ],
+      "topic": "UPS runtime",
+      "description": "F2 says the UPS carried the load 15 minutes but F12 says 9 minutes",
+      "confidence": "high"
+    },
+    {
+      "id": "X6",
+      "fact_ids": [
+        "F18",
+        "F12"
+      ],
+      "topic": "UPS rating vs observed runtime",
+      "description": "F18 rates the UPS at 15 minutes but F12 says it ran 9 minutes before exhaustion (assumes the UPS ran at full load, which is not stated)",
+      "confidence": "low"
+    },
+    {
+      "id": "X7",
+      "fact_ids": [
+        "F19",
+        "F22"
+      ],
+      "topic": "Generator B fuel",
+      "description": "F19 says about 11 hours but F22 says about 3 hours at 20 percent",
+      "confidence": "high"
+    },
+    {
+      "id": "X8",
+      "fact_ids": [
+        "F7",
+        "F25",
+        "F26"
+      ],
+      "topic": "cause of utility fault",
+      "description": "F7 says storm; F25 says clear skies; F26 says transformer failure at Substation 7",
+      "confidence": "high"
+    },
+    {
+      "id": "X9",
+      "fact_ids": [
+        "F20",
+        "F27"
+      ],
+      "topic": "premium customers",
+      "description": "F20 says 41 premium but F27 says 38",
+      "confidence": "high"
+    }
+  ]
+}

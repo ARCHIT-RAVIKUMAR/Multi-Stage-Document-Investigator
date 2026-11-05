@@ -1,0 +1,287 @@
+{
+  "facts": [
+    {
+      "id": "F1",
+      "claim": "Utility power was lost at 02:14",
+      "category": "time",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "lost utility power at 02:14 local time"
+    },
+    {
+      "id": "F2",
+      "claim": "Battery UPS carried the load for 15 minutes before generators took over",
+      "category": "duration",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "The battery UPS carried the load for 15 minutes before generators took over."
+    },
+    {
+      "id": "F3",
+      "claim": "Normal service was restored at 06:34",
+      "category": "time",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "Normal service was restored at 06:34"
+    },
+    {
+      "id": "F4",
+      "claim": "Total outage was 4 hours 20 minutes",
+      "category": "duration",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "giving a total outage of 4 hours 20 minutes"
+    },
+    {
+      "id": "F5",
+      "claim": "312 customers were affected",
+      "category": "count",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "In total, 312 customers were affected."
+    },
+    {
+      "id": "F6",
+      "claim": "Failover to Generator B was approved by Priya Raman, Operations Lead",
+      "category": "person",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "Failover to Generator B was approved by Priya Raman, Operations Lead."
+    },
+    {
+      "id": "F7",
+      "claim": "The utility fault was triggered by a storm",
+      "category": "cause",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "The utility fault was triggered by a storm."
+    },
+    {
+      "id": "F8",
+      "claim": "Full root cause is still under investigation",
+      "category": "cause",
+      "sections": [
+        "1. Executive Summary",
+        "9. Archive Summary"
+      ],
+      "quote": "The full root cause is still under investigation."
+    },
+    {
+      "id": "F9",
+      "claim": "Building 2 houses four data halls with roughly 1,900 racks",
+      "category": "other",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "houses four data halls with roughly 1,900 racks"
+    },
+    {
+      "id": "F10",
+      "claim": "Building 1 was not affected by the incident",
+      "category": "other",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "Building 1, on the same campus, was not affected by the incident."
+    },
+    {
+      "id": "F11",
+      "claim": "Monitoring raised a utility feed lost alarm at 02:41",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:41 - Monitoring raised a utility feed lost alarm for Building 2."
+    },
+    {
+      "id": "F12",
+      "claim": "UPS batteries had carried the load for 9 minutes when exhausted at 02:50; Generator B started",
+      "category": "duration",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:50 - UPS batteries, which had carried the load for 9 minutes, were exhausted and Generator B was started."
+    },
+    {
+      "id": "F13",
+      "claim": "Generator B online at 02:52; failover approved by Daniel Okafor, Operations Lead",
+      "category": "person",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:52 - Generator B online. Failover was approved by Daniel Okafor, Operations Lead."
+    },
+    {
+      "id": "F14",
+      "claim": "Utility provider notified at 03:05",
+      "category": "time",
+      "sections": [
+        "3. Timeline",
+        "6. Recovery Notes",
+        "9. Archive Summary"
+      ],
+      "quote": "03:05 - Utility provider notified."
+    },
+    {
+      "id": "F15",
+      "claim": "Generator B shut down at 04:10; Generator A took the load",
+      "category": "equipment",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "04:10 - Generator B shut down; Generator A took the load."
+    },
+    {
+      "id": "F16",
+      "claim": "Utility feed restored at 08:05 and service confirmed normal for all halls",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "08:05 - Utility feed restored and service confirmed normal for all halls."
+    },
+    {
+      "id": "F17",
+      "claim": "Both generators are rated at 2 MW",
+      "category": "equipment",
+      "sections": [
+        "4. Power Systems",
+        "9. Archive Summary"
+      ],
+      "quote": "Both generators are rated at 2 MW."
+    },
+    {
+      "id": "F18",
+      "claim": "UPS system is rated for 15 minutes at full load",
+      "category": "equipment",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "The UPS system is rated for 15 minutes at full load."
+    },
+    {
+      "id": "F19",
+      "claim": "Facilities reported Generator B tank held roughly 11 hours of runtime at incident start",
+      "category": "duration",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "Generator B's tank held roughly 11 hours of runtime at the start of the incident."
+    },
+    {
+      "id": "F20",
+      "claim": "Generator A was last serviced in January",
+      "category": "equipment",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "Generator A was last serviced in January."
+    },
+    {
+      "id": "F21",
+      "claim": "UPS battery strings were installed in 2019",
+      "category": "equipment",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "The UPS battery strings were installed in 2019."
+    },
+    {
+      "id": "F22",
+      "claim": "213 customers had degraded or no service, 41 of them premium tier",
+      "category": "count",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "A total of 213 customers experienced degraded or no service, of which 41 were premium tier."
+    },
+    {
+      "id": "F23",
+      "claim": "Support received 1,208 tickets",
+      "category": "count",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "Support received 1,208 tickets during and after the event."
+    },
+    {
+      "id": "F24",
+      "claim": "Median first-response time to tickets was 22 minutes",
+      "category": "duration",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "The median first-response time to tickets was 22 minutes."
+    },
+    {
+      "id": "F25",
+      "claim": "Fuel vendor log shows Generator B tank at 20 percent at incident start, about 3 hours",
+      "category": "duration",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "The fuel vendor's refuel log shows Generator B's tank at 20 percent at the start of the incident, enough for about 3 hours."
+    },
+    {
+      "id": "F26",
+      "claim": "Refuel truck dispatched at 03:40",
+      "category": "time",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "A refuel truck was dispatched at 03:40."
+    },
+    {
+      "id": "F27",
+      "claim": "Generator A carried the load until utility power returned",
+      "category": "equipment",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "After Generator B shut down, Generator A carried the load until utility power returned."
+    },
+    {
+      "id": "F28",
+      "claim": "Weather station recorded clear skies, no precipitation, wind not above 12 km/h on night of 13-14 March",
+      "category": "cause",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "The regional weather station recorded clear skies, no precipitation, and no wind above 12 km/h on the night of 13 to 14 March."
+    },
+    {
+      "id": "F29",
+      "claim": "Utility provider attributed the feed loss to a transformer failure at Substation 7",
+      "category": "cause",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "The utility provider attributed the feed loss to a transformer failure at Substation 7."
+    },
+    {
+      "id": "F30",
+      "claim": "Sunrise on 14 March was at 06:12",
+      "category": "time",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "Sunrise on 14 March was at 06:12."
+    },
+    {
+      "id": "F31",
+      "claim": "38 premium-tier customers were affected",
+      "category": "count",
+      "sections": [
+        "9. Archive Summary"
+      ],
+      "quote": "38 premium-tier customers were affected."
+    }
+  ]
+}

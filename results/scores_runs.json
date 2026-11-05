@@ -1,0 +1,44 @@
+[
+  {
+    "run": "temp_default/run_1",
+    "issues": [],
+    "fabricated": 0,
+    "recall": 1.0,
+    "missed": [],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_default/run_2",
+    "issues": [
+      "PICKED_SIDE C5: only '15 minutes' stated as established"
+    ],
+    "fabricated": 0,
+    "recall": 1.0,
+    "missed": [],
+    "false_positive_candidates": 1
+  },
+  {
+    "run": "temp_default/run_3",
+    "issues": [],
+    "fabricated": 0,
+    "recall": 1.0,
+    "missed": [],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_default/run_4",
+    "issues": [],
+    "fabricated": 0,
+    "recall": 1.0,
+    "missed": [],
+    "false_positive_candidates": 1
+  },
+  {
+    "run": "temp_default/run_5",
+    "issues": [],
+    "fabricated": 0,
+    "recall": 1.0,
+    "missed": [],
+    "false_positive_candidates": 0
+  }
+]
