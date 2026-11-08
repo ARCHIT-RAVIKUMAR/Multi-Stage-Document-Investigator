@@ -39,7 +39,21 @@ def mock_llm(stage, temp):
             "root_cause_determined": temp >= 1.0, "root_cause_statement":"unknown",
             "not_supported_by_evidence":["data loss"],"overall_confidence":"low","conclusion":"mock"}
 
+PROVIDER = {"name": "anthropic", "base_url": None}
+
 def real_llm(system, user, temp, model):
+    if PROVIDER["name"] == "openai":  # works for OpenAI, Groq, Gemini (OpenAI-compatible endpoints)
+        import os
+        from openai import OpenAI
+        c = OpenAI(base_url=PROVIDER["base_url"], api_key=os.environ["LLM_API_KEY"])
+        r = c.chat.completions.create(model=model, temperature=temp, max_tokens=8000,
+              response_format={"type": "json_object"},
+              extra_body={"reasoning_effort": "low"},
+              messages=[{"role": "system", "content": system}, {"role": "user", "content": user}])
+        ch = r.choices[0]
+        if not ch.message.content:
+            print(f"  empty reply, finish_reason={ch.finish_reason}", file=sys.stderr)
+        return ch.message.content or ""
     import anthropic
     c = anthropic.Anthropic()
     r = c.messages.create(model=model, max_tokens=4000, temperature=temp, system=system,
@@ -68,8 +82,11 @@ def main():
     ap.add_argument("--temps", nargs="+", type=float, default=[0.0, 0.7, 1.0])
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--model", default="claude-haiku-4-5-20251001")
+    ap.add_argument("--provider", choices=["anthropic", "openai"], default="anthropic")
+    ap.add_argument("--base-url", default=None, help="for --provider openai (Groq/Gemini/etc.)")
     ap.add_argument("--mock", action="store_true", help="offline plumbing test; NOT real model output")
     a = ap.parse_args()
+    PROVIDER.update(name=a.provider, base_url=a.base_url)
     base = ROOT / ("runs_mock" if a.mock else "runs")
     for t in a.temps:
         for i in range(1, a.runs + 1):

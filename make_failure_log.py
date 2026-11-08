@@ -4,14 +4,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 base = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "runs")
-key = {k["id"]: k for k in json.loads((ROOT / "answer_key.json").read_text())["contradictions"]}
-scores = json.loads((ROOT / "results" / f"scores_{base.name}.json").read_text())
-summary = (ROOT / "results" / f"summary_{base.name}.md").read_text()
+key = {k["id"]: k for k in json.loads((ROOT / "answer_key.json").read_text(encoding="utf-8"))["contradictions"]}
+scores = json.loads((ROOT / "results" / f"scores_{base.name}.json").read_text(encoding="utf-8"))
+summary = (ROOT / "results" / f"summary_{base.name}.md").read_text(encoding="utf-8")
 norm = lambda s: re.sub(r"\s+", " ", s.lower())
 
 def diagnose(run, issue):
-    facts = json.loads((base / run / "stage1_facts.json").read_text())["facts"]
-    ftxt = [norm(f["claim"] + " " + f.get("quote", "")) for f in facts]
+    if issue.startswith("SCHEMA_VIOLATION"):
+        return ("schema violation", "A stage returned JSON in the wrong structure (e.g. facts as plain strings, or missing ids). Check which stage in that run folder.")
+    if issue.startswith("PIPELINE_FAILURE"):
+        return ("pipeline failure", "A stage returned invalid JSON or errored; see the *_raw.txt files.")
+    facts = [x for x in json.loads((base / run / "stage1_facts.json").read_text(encoding="utf-8"))["facts"] if isinstance(x, dict)]
+    ftxt = [norm(str(f.get("claim", "")) + " " + str(f.get("quote", ""))) for f in facts]
     kind = issue.split()[0].rstrip(":")
     if kind == "MISSED_CONTRADICTION":
         k = key[issue.split()[1]]
@@ -37,6 +41,7 @@ def diagnose(run, issue):
 seen, picked = set(), []
 for s in scores:
     for i in s["issues"]:
+        if i.startswith("MALFORMED"): continue
         cat, why = diagnose(s["run"], i)
         if (cat, i.split()[1] if len(i.split()) > 1 else "") in seen: continue
         seen.add((cat, i.split()[1] if len(i.split()) > 1 else ""))
@@ -58,5 +63,5 @@ for n, (run, issue, cat, why) in enumerate(chosen[:6], 1):
             f"- **Run:** `{base.name}/{run}`", f"- **Detected issue:** `{issue}`",
             f"- **Where it started:** {why}",
             f"- **Evidence:** `{base.name}/{run}/stage1_facts.json`, `stage2_contradictions.json`, `stage3_final.json`", ""]
-(ROOT / "FAILURE_ANALYSIS.md").write_text("\n".join(out))
+(ROOT / "FAILURE_ANALYSIS.md").write_text("\n".join(out), encoding="utf-8")
 print(f"wrote FAILURE_ANALYSIS.md with {min(len(chosen),6)} entries")

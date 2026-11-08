@@ -1,0 +1,94 @@
+{
+  "contradictions": [
+    {
+      "id": "X1",
+      "fact_ids": [
+        "F1",
+        "F10"
+      ],
+      "topic": "outage start time",
+      "description": "F1 says 02:14 but F10 says the alarm was raised at 02:41",
+      "confidence": "high"
+    },
+    {
+      "id": "X2",
+      "fact_ids": [
+        "F3",
+        "F15"
+      ],
+      "topic": "restoration time",
+      "description": "F3 says restored at 06:34 but F15 says restored at 08:05",
+      "confidence": "high"
+    },
+    {
+      "id": "X3",
+      "fact_ids": [
+        "F5",
+        "F18"
+      ],
+      "topic": "customers affected",
+      "description": "F5 says 312 customers but F18 says 213",
+      "confidence": "high"
+    },
+    {
+      "id": "X4",
+      "fact_ids": [
+        "F6",
+        "F12"
+      ],
+      "topic": "failover approver",
+      "description": "F6 names Priya Raman but F12 names Daniel Okafor",
+      "confidence": "high"
+    },
+    {
+      "id": "X5",
+      "fact_ids": [
+        "F2",
+        "F11"
+      ],
+      "topic": "UPS runtime",
+      "description": "F2 says 15 minutes but F11 says 9 minutes",
+      "confidence": "high"
+    },
+    {
+      "id": "X6",
+      "fact_ids": [
+        "F17",
+        "F20"
+      ],
+      "topic": "Generator B fuel",
+      "description": "F17 says about 11 hours but F20 says 20 percent, about 3 hours",
+      "confidence": "high"
+    },
+    {
+      "id": "X7",
+      "fact_ids": [
+        "F7",
+        "F22"
+      ],
+      "topic": "cause: storm vs weather record",
+      "description": "F7 says a storm triggered the fault but F22 says clear skies and no precipitation",
+      "confidence": "high"
+    },
+    {
+      "id": "X8",
+      "fact_ids": [
+        "F7",
+        "F23"
+      ],
+      "topic": "cause: storm vs transformer",
+      "description": "F7 says a storm triggered the fault but F23 attributes it to a transformer failure",
+      "confidence": "medium"
+    },
+    {
+      "id": "X9",
+      "fact_ids": [
+        "F18",
+        "F24"
+      ],
+      "topic": "premium customers",
+      "description": "F18 says 41 premium customers but F24 says 38",
+      "confidence": "high"
+    }
+  ]
+}

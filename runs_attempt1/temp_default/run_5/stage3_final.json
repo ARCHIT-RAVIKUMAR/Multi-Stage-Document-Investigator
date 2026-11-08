@@ -1,0 +1,73 @@
+{
+  "established_findings": [
+    {
+      "text": "Both generators are rated at 2 MW.",
+      "fact_ids": [
+        "F20"
+      ]
+    },
+    {
+      "text": "The utility provider was notified at 03:05.",
+      "fact_ids": [
+        "F19"
+      ]
+    },
+    {
+      "text": "Generator B shut down at 04:10 and Generator A took the load.",
+      "fact_ids": [
+        "F11"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "X1",
+      "summary": "F1 says 02:14 but F8 says 02:41",
+      "what_would_resolve_it": "Raw utility/monitoring logs with timestamps"
+    },
+    {
+      "contradiction_id": "X2",
+      "summary": "F3 says 06:34 but F12 says 08:05",
+      "what_would_resolve_it": "Utility and service-restoration logs"
+    },
+    {
+      "contradiction_id": "X3",
+      "summary": "F4 says 312 but F14 says 213",
+      "what_would_resolve_it": "Billing or support records of affected accounts"
+    },
+    {
+      "contradiction_id": "X4",
+      "summary": "F5 says Priya Raman but F10 says Daniel Okafor",
+      "what_would_resolve_it": "Change-approval record or on-call log"
+    },
+    {
+      "contradiction_id": "X5",
+      "summary": "F2 says 15 minutes but F9 says 9 minutes",
+      "what_would_resolve_it": "UPS controller event log"
+    },
+    {
+      "contradiction_id": "X6",
+      "summary": "F13 says about 11 hours but F15 says about 3 hours",
+      "what_would_resolve_it": "Fuel vendor gauge reading vs Facilities estimate"
+    },
+    {
+      "contradiction_id": "X7",
+      "summary": "F6 says storm but F16 says clear skies and F17 says transformer failure",
+      "what_would_resolve_it": "Utility provider incident report and independent weather data"
+    },
+    {
+      "contradiction_id": "X8",
+      "summary": "F14 says 41 premium but F18 says 38",
+      "what_would_resolve_it": "Customer tier list for affected accounts"
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "Not determined; facts say it is under investigation.",
+  "not_supported_by_evidence": [
+    "Whether any customer data was lost",
+    "Any SLA credit or financial penalty",
+    "Why the transformer failed"
+  ],
+  "overall_confidence": "low",
+  "conclusion": "The document contradicts itself on eight points: timing, customer counts, approver, UPS runtime, fuel and cause. Only a few details (generator ratings, notification time, generator handover) are consistent. The root cause is not established."
+}

@@ -1,0 +1,85 @@
+{
+  "contradictions": [
+    {
+      "id": "X1",
+      "fact_ids": [
+        "F1",
+        "F8"
+      ],
+      "topic": "outage start time",
+      "description": "F1 says 02:14 but F8 says 02:41",
+      "confidence": "high"
+    },
+    {
+      "id": "X2",
+      "fact_ids": [
+        "F3",
+        "F12"
+      ],
+      "topic": "restoration time",
+      "description": "F3 says 06:34 but F12 says 08:05",
+      "confidence": "high"
+    },
+    {
+      "id": "X3",
+      "fact_ids": [
+        "F4",
+        "F14"
+      ],
+      "topic": "customers affected",
+      "description": "F4 says 312 but F14 says 213",
+      "confidence": "high"
+    },
+    {
+      "id": "X4",
+      "fact_ids": [
+        "F5",
+        "F10"
+      ],
+      "topic": "failover approver",
+      "description": "F5 says Priya Raman but F10 says Daniel Okafor",
+      "confidence": "high"
+    },
+    {
+      "id": "X5",
+      "fact_ids": [
+        "F2",
+        "F9"
+      ],
+      "topic": "UPS runtime",
+      "description": "F2 says 15 minutes but F9 says 9 minutes",
+      "confidence": "high"
+    },
+    {
+      "id": "X6",
+      "fact_ids": [
+        "F13",
+        "F15"
+      ],
+      "topic": "Generator B fuel",
+      "description": "F13 says about 11 hours but F15 says about 3 hours",
+      "confidence": "high"
+    },
+    {
+      "id": "X7",
+      "fact_ids": [
+        "F6",
+        "F16",
+        "F17"
+      ],
+      "topic": "cause of utility fault",
+      "description": "F6 says storm but F16 says clear skies and F17 says transformer failure",
+      "confidence": "high"
+    },
+    {
+      "id": "X8",
+      "fact_ids": [
+        "F14",
+        "F18"
+      ],
+      "topic": "premium customers",
+      "description": "F14 says 41 premium but F18 says 38",
+      "confidence": "high"
+    }
+  ]
+}

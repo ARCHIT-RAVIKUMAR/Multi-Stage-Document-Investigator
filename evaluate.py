@@ -5,18 +5,43 @@ import json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).parent
 base = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "runs")
-KEY = json.loads((ROOT / "answer_key.json").read_text())
+KEY = json.loads((ROOT / "answer_key.json").read_text(encoding="utf-8"))
 norm = lambda s: re.sub(r"\s+", " ", s.lower()).strip()
-DOC = norm((ROOT / "source_document.md").read_text())
+DOC = norm((ROOT / "source_document.md").read_text(encoding="utf-8"))
 
-def score(run: Path):
+
+def check_structure(run: Path):
+    """Return a message naming the stage and the problem, or None if the shape is usable."""
+    for fn, key, need in [("stage1_facts", "facts", "id"), ("stage2_contradictions", "contradictions", None)]:
+        d = json.loads((run / f"{fn}.json").read_text(encoding="utf-8"))
+        v = d.get(key) if isinstance(d, dict) else None
+        if not isinstance(v, list):
+            return f"{fn}.json: '{key}' missing or not a list (top level is {type(d).__name__}, keys={list(d)[:5] if isinstance(d, dict) else 'n/a'})"
+        bad = [x for x in v if not isinstance(x, dict) and not (isinstance(x, str) and not x.strip())]
+        if bad:
+            return f"{fn}.json: '{key}' has {len(bad)} non-object item(s), first is {str(bad[0])[:70]!r}"
+        if need and any(need not in x for x in v if isinstance(x, dict)):
+            return f"{fn}.json: some items have no '{need}' field"
+    fin = json.loads((run / "stage3_final.json").read_text(encoding="utf-8"))
+    if not isinstance(fin, dict):
+        return f"stage3_final.json: top level is {type(fin).__name__}, expected object"
+    ef = fin.get("established_findings", [])
+    if not isinstance(ef, list) or any(not isinstance(x, dict) or "text" not in x for x in ef):
+        return f"stage3_final.json: 'established_findings' items must be objects with 'text' (first: {str(ef[:1])[:70]!r})"
+    return None
+
+def _score(run: Path):
     r = {"run": str(run.relative_to(base)), "issues": []}
     try:
-        facts = json.loads((run / "stage1_facts.json").read_text())["facts"]
-        cons = json.loads((run / "stage2_contradictions.json").read_text())["contradictions"]
-        fin = json.loads((run / "stage3_final.json").read_text())
+        facts = json.loads((run / "stage1_facts.json").read_text(encoding="utf-8"))["facts"]
+        cons = json.loads((run / "stage2_contradictions.json").read_text(encoding="utf-8"))["contradictions"]
+        fin = json.loads((run / "stage3_final.json").read_text(encoding="utf-8"))
     except Exception as e:
-        r["issues"].append(f"PIPELINE_FAILURE: {e}"); r.update(recall=0, fabricated=0); return r
+        r["issues"].append(f"PIPELINE_FAILURE: {e}"); r.update(recall=None, fabricated=0); return r
+    n_junk = sum(1 for f in facts if not isinstance(f, dict)) + sum(1 for c in cons if not isinstance(c, dict))
+    facts = [f for f in facts if isinstance(f, dict)]
+    cons = [c for c in cons if isinstance(c, dict)]
+    if n_junk: r["issues"].append(f"MALFORMED_ITEMS (ignored, minor): {n_junk} empty entries in stage 1/2 lists")
     byid = {f["id"]: f for f in facts}
     # 1. fabricated quotes (extraction hallucination)
     bad = [f["id"] for f in facts if norm(f.get("quote", "")) not in DOC]
@@ -49,20 +74,33 @@ def score(run: Path):
         any(all(w in norm(c.get('description','')+' '+c.get('topic','')) for w in g) for g in k['any_of']) for k in KEY['contradictions'])])
     return r
 
+
+def score(run: Path):
+    try:
+        msg = check_structure(run)
+        if msg:
+            return {"run": str(run.relative_to(base)), "recall": None, "fabricated": 0, "missed": [],
+                    "false_positive_candidates": 0, "issues": [f"SCHEMA_VIOLATION: {msg}"]}
+        return _score(run)
+    except (TypeError, AttributeError, KeyError, ValueError, IndexError) as e:
+        return {"run": str(run.relative_to(base)), "recall": None, "fabricated": 0, "missed": [],
+                "false_positive_candidates": 0,
+                "issues": [f"SCHEMA_VIOLATION: a stage returned the wrong structure ({type(e).__name__}: {e})"]}
+
 rows = [score(p) for p in sorted(base.glob("temp_*/run_*")) if p.is_dir()]
 (ROOT / "results").mkdir(exist_ok=True)
-(ROOT / "results" / f"scores_{base.name}.json").write_text(json.dumps(rows, indent=2))
+(ROOT / "results" / f"scores_{base.name}.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
 by = {}
-for r in rows: by.setdefault(r["run"].split("/")[0], []).append(r)
+for r in rows: by.setdefault(Path(r["run"]).parts[0], []).append(r)
 lines = ["| temp | runs | mean recall | fabricated quotes | overreach/pick-side/dropped | false-positive candidates |", "|---|---|---|---|---|---|"]
 for t, rs in by.items():
-    n = len(rs); rec = sum(x.get("recall", 0) for x in rs) / n
+    n = len(rs); ok = [x["recall"] for x in rs if x.get("recall") is not None]; rec = (sum(ok) / len(ok)) if ok else None
     fab = sum(x.get("fabricated", 0) for x in rs)
-    ov = sum(1 for x in rs for i in x["issues"] if i.split()[0].rstrip(":").split("_")[0] in ("OVERREACH", "PICKED", "DROPPED", "PHANTOM"))
+    ov = sum(1 for x in rs for i in x["issues"] if i.split()[0].rstrip(":").split("_")[0] in ("OVERREACH", "PICKED", "DROPPED", "PHANTOM", "SCHEMA", "PIPELINE"))
     fp = sum(x.get("false_positive_candidates", 0) for x in rs)
-    lines.append(f"| {t} | {n} | {rec:.2f} | {fab} | {ov} | {fp} |")
+    lines.append(f"| {t} | {n} | {"n/a" if rec is None else format(rec, ".2f")} | {fab} | {ov} | {fp} |")
 md = "\n".join(lines)
-(ROOT / "results" / f"summary_{base.name}.md").write_text(md + "\n")
+(ROOT / "results" / f"summary_{base.name}.md").write_text(md + "\n", encoding="utf-8")
 print(md)
 for r in rows:
     if r["issues"]: print("\n" + r["run"]); [print("  -", i) for i in r["issues"]]

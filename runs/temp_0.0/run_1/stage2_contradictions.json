@@ -1,0 +1,44 @@
+{
+  "contradictions": [
+    {
+      "id": "C1",
+      "fact_ids": [
+        "F2",
+        "F14"
+      ],
+      "topic": "UPS duration",
+      "description": "Fact F2 says the battery UPS carried the load for 15 minutes before generators took over, but Fact F14 says the UPS batteries carried the load for 9 minutes before Generator B was started.",
+      "confidence": "high"
+    },
+    {
+      "id": "C2",
+      "fact_ids": [
+        "F3",
+        "F18"
+      ],
+      "topic": "Service restoration time",
+      "description": "Fact F3 states normal service was restored at 06:34, while Fact F18 indicates the utility feed was restored and service confirmed normal at 08:05.",
+      "confidence": "high"
+    },
+    {
+      "id": "C3",
+      "fact_ids": [
+        "F6",
+        "F15"
+      ],
+      "topic": "Failover approval",
+      "description": "Fact F6 claims Failover to Generator B was approved by Priya Raman, Operations Lead, whereas Fact F15 says the failover was approved by Daniel Okafor, Operations Lead.",
+      "confidence": "high"
+    },
+    {
+      "id": "C4",
+      "fact_ids": [
+        "F21",
+        "F27"
+      ],
+      "topic": "Generator B fuel capacity",
+      "description": "Fact F21 states Generator B's tank held roughly 11 hours of runtime at the start of the incident, but Fact F27 says the tank was at 20 percent, enough for about 3 hours.",
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "established_findings": [
+    {
+      "text": "The outage began on 14 March at 02:14 local time when Building 2 lost utility power.",
+      "fact_ids": [
+        "F1"
+      ]
+    },
+    {
+      "text": "The total outage duration was 4 hours and 20 minutes.",
+      "fact_ids": [
+        "F4"
+      ]
+    },
+    {
+      "text": "A total of 312 customers were affected by the outage.",
+      "fact_ids": [
+        "F5"
+      ]
+    },
+    {
+      "text": "Building 2, which houses four data halls with roughly 1,900 racks, opened in 2017.",
+      "fact_ids": [
+        "F8",
+        "F9"
+      ]
+    },
+    {
+      "text": "Building 1 on the same campus was not affected by the incident.",
+      "fact_ids": [
+        "F10"
+      ]
+    },
+    {
+      "text": "The campus is staffed 24/7 by a rotating team of operations engineers.",
+      "fact_ids": [
+        "F12"
+      ]
+    },
+    {
+      "text": "At 02:41, monitoring raised a utility feed lost alarm for Building 2.",
+      "fact_ids": [
+        "F13"
+      ]
+    },
+    {
+      "text": "At 04:10, Generator B shut down and Generator A took the load.",
+      "fact_ids": [
+        "F17"
+      ]
+    },
+    {
+      "text": "Both generators are rated at 2 MW each.",
+      "fact_ids": [
+        "F19",
+        "F37"
+      ]
+    },
+    {
+      "text": "The UPS system is rated for 15 minutes at full load.",
+      "fact_ids": [
+        "F20"
+      ]
+    },
+    {
+      "text": "Generator A was last serviced in January.",
+      "fact_ids": [
+        "F22"
+      ]
+    },
+    {
+      "text": "The UPS battery strings were installed in 2019.",
+      "fact_ids": [
+        "F23"
+      ]
+    },
+    {
+      "text": "Support received 1,208 tickets during and after the event, with a median first-response time of 22 minutes.",
+      "fact_ids": [
+        "F25",
+        "F26"
+      ]
+    },
+    {
+      "text": "A refuel truck was dispatched at 03:40.",
+      "fact_ids": [
+        "F28"
+      ]
+    },
+    {
+      "text": "After Generator B shut down, Generator A carried the load until utility power returned.",
+      "fact_ids": [
+        "F29"
+      ]
+    },
+    {
+      "text": "The utility provider was notified at 03:05.",
+      "fact_ids": [
+        "F30"
+      ]
+    },
+    {
+      "text": "The utility provider attributed the feed loss to a transformer failure at Substation 7.",
+      "fact_ids": [
+        "F32"
+      ]
+    },
+    {
+      "text": "Sunrise on 14 March was at 06:12.",
+      "fact_ids": [
+        "F33"
+      ]
+    },
+    {
+      "text": "The root cause is under investigation.",
+      "fact_ids": [
+        "F38"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "C1",
+      "summary": "UPS duration reported as 15 minutes (F2) versus 9 minutes (F14).",
+      "what_would_resolve_it": "Clarify the actual UPS runtime from system logs."
+    },
+    {
+      "contradiction_id": "C2",
+      "summary": "Service restoration time reported as 06:34 (F3) versus 08:05 (F18).",
+      "what_would_resolve_it": "Confirm the timestamp of normal service confirmation from monitoring data."
+    },
+    {
+      "contradiction_id": "C3",
+      "summary": "Failover approval attributed to Priya Raman (F6) versus Daniel Okafor (F15).",
+      "what_would_resolve_it": "Verify the approval record in the operations log."
+    },
+    {
+      "contradiction_id": "C4",
+      "summary": "Generator B fuel capacity reported as 11 hours (F21) versus 3 hours at 20% (F27).",
+      "what_would_resolve_it": "Check the fuel level readings at the start of the incident."
+    },
+    {
+      "contradiction_id": "C5",
+      "summary": "Cause of fault reported as storm (F7) versus clear weather (F31).",
+      "what_would_resolve_it": "Review the weather data for the exact time of the fault."
+    },
+    {
+      "contradiction_id": "C6",
+      "summary": "Premium tier customer count reported as 41 (F24) versus 38 (F35).",
+      "what_would_resolve_it": "Cross\u2011check the customer impact logs for premium tier customers."
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "",
+  "not_supported_by_evidence": [],
+  "overall_confidence": "medium",
+  "conclusion": "The outage at Building 2 on 14 March began at 02:14 and lasted 4 hours 20 minutes, affecting 312 customers. While the incident was managed with generator failover and a refuel truck, several key details\u2014UPS runtime, restoration time, failover approval, fuel capacity, cause, and premium customer count\u2014remain unresolved. Further investigation is required to reconcile these contradictions and determine the definitive root cause."
+}

@@ -1,0 +1,61 @@
+{
+  "established_findings": [
+    {
+      "text": "The Larkspur Data Center (Building 2) lost utility power at 02:14 on 14 March, and normal service was restored at 06:34, resulting in a total outage of 4 hours and 20 minutes that affected 312 customers.",
+      "fact_ids": [
+        "F1",
+        "F3",
+        "F4",
+        "F5"
+      ]
+    },
+    {
+      "text": "The battery UPS system, rated for 15 minutes at full load, carried the load for approximately 15 minutes before generators were engaged, and Generators B and A each are rated at 2 MW.",
+      "fact_ids": [
+        "F2",
+        "F20",
+        "F21",
+        "F22"
+      ]
+    },
+    {
+      "text": "The utility fault was triggered by a storm, with the utility provider attributing the feed loss to a transformer failure at Substation 7.",
+      "fact_ids": [
+        "F7",
+        "F32"
+      ]
+    },
+    {
+      "text": "Building 2 houses four data halls with roughly 1,900 racks and opened in 2017; Building 1 was not affected.",
+      "fact_ids": [
+        "F8",
+        "F9",
+        "F10"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "C1",
+      "summary": "UPS duration is inconsistent: one source states 15 minutes, another 9 minutes.",
+      "what_would_resolve_it": "Direct confirmation from the UPS monitoring logs."
+    },
+    {
+      "contradiction_id": "C2",
+      "summary": "Failover approval attribution is inconsistent: Priya Raman vs Daniel Okafor.",
+      "what_would_resolve_it": "Verification of the official approval sign\u2011off record."
+    },
+    {
+      "contradiction_id": "C3",
+      "summary": "Premium\u2011tier customer count is inconsistent: 41 vs 38.",
+      "what_would_resolve_it": "Audit of the incident ticketing system for premium\u2011tier entries."
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "",
+  "not_supported_by_evidence": [
+    "Data on financial penalties, data loss, or any root\u2011cause determination beyond the storm and transformer failure are not covered by the provided facts."
+  ],
+  "overall_confidence": "medium",
+  "conclusion": "A 4\u2011hour 20\u2011minute outage at the Larkspur Data Center was caused by a storm\u2011triggered transformer failure at Substation\u202f7.  The UPS system and two generators provided backup power, but conflicting records exist regarding the exact UPS run time, the person who approved generator failover, and the count of premium\u2011tier customers impacted.  These unresolved contradictions prevent definitive conclusions about specific operational details and require further evidence."
+}

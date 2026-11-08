@@ -1,0 +1,199 @@
+{
+  "established_findings": [
+    {
+      "text": "On 14 March, the Larkspur Data Center (Building 2) lost utility power at 02:14 local time.",
+      "fact_ids": [
+        "F1"
+      ]
+    },
+    {
+      "text": "Normal service was restored at 06:34.",
+      "fact_ids": [
+        "F3"
+      ]
+    },
+    {
+      "text": "312 customers were affected.",
+      "fact_ids": [
+        "F5"
+      ]
+    },
+    {
+      "text": "Failover to Generator B was approved by Priya Raman, Operations Lead.",
+      "fact_ids": [
+        "F6"
+      ]
+    },
+    {
+      "text": "The utility fault was triggered by a storm.",
+      "fact_ids": [
+        "F7"
+      ]
+    },
+    {
+      "text": "Building 2 opened in 2017.",
+      "fact_ids": [
+        "F8"
+      ]
+    },
+    {
+      "text": "Building 2 houses four data halls with roughly 1,900 racks.",
+      "fact_ids": [
+        "F9"
+      ]
+    },
+    {
+      "text": "Building 1 was not affected by the incident.",
+      "fact_ids": [
+        "F10"
+      ]
+    },
+    {
+      "text": "The visitor parking lot has 14 additional spaces.",
+      "fact_ids": [
+        "F11"
+      ]
+    },
+    {
+      "text": "The campus is staffed 24/7 by a rotating team of operations engineers.",
+      "fact_ids": [
+        "F12"
+      ]
+    },
+    {
+      "text": "At 02:41, a utility feed lost alarm was raised for Building 2.",
+      "fact_ids": [
+        "F13"
+      ]
+    },
+    {
+      "text": "At 02:52, Generator B went online.",
+      "fact_ids": [
+        "F15"
+      ]
+    },
+    {
+      "text": "At 03:05, the utility provider was notified.",
+      "fact_ids": [
+        "F17"
+      ]
+    },
+    {
+      "text": "At 04:10, Generator B shut down and Generator A took the load.",
+      "fact_ids": [
+        "F18"
+      ]
+    },
+    {
+      "text": "At 08:05, the utility feed was restored and service was normal for all halls.",
+      "fact_ids": [
+        "F19"
+      ]
+    },
+    {
+      "text": "Both generators are rated at 2 MW.",
+      "fact_ids": [
+        "F20"
+      ]
+    },
+    {
+      "text": "The UPS system is rated for 15 minutes at full load.",
+      "fact_ids": [
+        "F21"
+      ]
+    },
+    {
+      "text": "Generator A was last serviced in January.",
+      "fact_ids": [
+        "F23"
+      ]
+    },
+    {
+      "text": "The UPS battery strings were installed in 2019.",
+      "fact_ids": [
+        "F24"
+      ]
+    },
+    {
+      "text": "213 customers experienced degraded or no service.",
+      "fact_ids": [
+        "F25"
+      ]
+    },
+    {
+      "text": "41 customers were premium tier.",
+      "fact_ids": [
+        "F26"
+      ]
+    },
+    {
+      "text": "Support received 1,208 tickets during and after the event.",
+      "fact_ids": [
+        "F27"
+      ]
+    },
+    {
+      "text": "The median first-response time to tickets was 22 minutes.",
+      "fact_ids": [
+        "F28"
+      ]
+    },
+    {
+      "text": "A refuel truck was dispatched at 03:40.",
+      "fact_ids": [
+        "F30"
+      ]
+    },
+    {
+      "text": "The weather station recorded clear skies, no precipitation, and no wind above 12 km/h on the night of 13 to 14 March.",
+      "fact_ids": [
+        "F31"
+      ]
+    },
+    {
+      "text": "The utility provider attributed the feed loss to a transformer failure at Substation 7.",
+      "fact_ids": [
+        "F32"
+      ]
+    },
+    {
+      "text": "Sunrise on 14 March was at 06:12.",
+      "fact_ids": [
+        "F33"
+      ]
+    },
+    {
+      "text": "38 premium-tier customers were affected.",
+      "fact_ids": [
+        "F34"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "C1",
+      "summary": "UPS duration discrepancy: 15 minutes vs 9 minutes",
+      "what_would_resolve_it": "Clarify the actual UPS runtime during the outage."
+    },
+    {
+      "contradiction_id": "C2",
+      "summary": "Service restoration time discrepancy: 06:34 vs 08:05",
+      "what_would_resolve_it": "Confirm the exact time service was fully restored."
+    },
+    {
+      "contradiction_id": "C3",
+      "summary": "Failover approval discrepancy: Priya Raman vs Daniel Okafor",
+      "what_would_resolve_it": "Identify the official approval authority."
+    },
+    {
+      "contradiction_id": "C4",
+      "summary": "Generator B fuel capacity discrepancy: 11 hours vs 3 hours at 20%",
+      "what_would_resolve_it": "Verify the actual tank capacity and fuel level."
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "No root cause is confirmed; the cause remains under investigation.",
+  "not_supported_by_evidence": [],
+  "overall_confidence": "medium",
+  "conclusion": "The Larkspur Data Center experienced a 4\u2011hour 20\u2011minute outage on 14 March due to a storm\u2011induced transformer failure that cut utility power. Backup systems, including UPS and generators, restored service by 06:34, affecting 312 customers, with 38 premium tier customers impacted. Several factual inconsistencies remain unresolved, preventing a definitive root cause determination."
+}

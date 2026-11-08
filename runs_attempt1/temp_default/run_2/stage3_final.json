@@ -1,0 +1,105 @@
+{
+  "established_findings": [
+    {
+      "text": "Building 1 was not affected.",
+      "fact_ids": [
+        "F10"
+      ]
+    },
+    {
+      "text": "Both generators are rated at 2 MW.",
+      "fact_ids": [
+        "F17"
+      ]
+    },
+    {
+      "text": "The utility provider was notified at 03:05.",
+      "fact_ids": [
+        "F14"
+      ]
+    },
+    {
+      "text": "Generator B shut down at 04:10 and Generator A took the load, carrying it until utility power returned.",
+      "fact_ids": [
+        "F15",
+        "F27"
+      ]
+    },
+    {
+      "text": "A refuel truck was dispatched at 03:40.",
+      "fact_ids": [
+        "F26"
+      ]
+    },
+    {
+      "text": "Support received 1,208 tickets with a median first response of 22 minutes.",
+      "fact_ids": [
+        "F23",
+        "F24"
+      ]
+    },
+    {
+      "text": "The UPS system is rated for 15 minutes at full load.",
+      "fact_ids": [
+        "F18"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "X1",
+      "summary": "F1 says power was lost at 02:14 but F11 shows the alarm at 02:41",
+      "what_would_resolve_it": "Raw utility/monitoring logs with timestamps"
+    },
+    {
+      "contradiction_id": "X2",
+      "summary": "F3 says service restored at 06:34 (outage 4h20m per F4) but F16 says utility feed restored and service confirmed normal at 08:05",
+      "what_would_resolve_it": "Utility and service-restoration logs"
+    },
+    {
+      "contradiction_id": "X3",
+      "summary": "F5 says 312 customers affected but F22 says 213",
+      "what_would_resolve_it": "Billing or support records of affected accounts"
+    },
+    {
+      "contradiction_id": "X4",
+      "summary": "F6 says Priya Raman approved the failover but F13 says Daniel Okafor",
+      "what_would_resolve_it": "Change-approval record or on-call log"
+    },
+    {
+      "contradiction_id": "X5",
+      "summary": "F2 says the UPS carried the load for 15 minutes but F12 says 9 minutes",
+      "what_would_resolve_it": "UPS controller event log"
+    },
+    {
+      "contradiction_id": "X6",
+      "summary": "F19 says roughly 11 hours of runtime but F25 says 20 percent, about 3 hours",
+      "what_would_resolve_it": "Fuel vendor gauge reading vs Facilities estimate"
+    },
+    {
+      "contradiction_id": "X7",
+      "summary": "F7 says a storm triggered the fault but F28 records clear skies and F29 attributes it to a transformer failure",
+      "what_would_resolve_it": "Utility provider incident report and independent weather data"
+    },
+    {
+      "contradiction_id": "X8",
+      "summary": "F22 says 41 premium customers but F31 says 38",
+      "what_would_resolve_it": "Customer tier list for affected accounts"
+    },
+    {
+      "contradiction_id": "X9",
+      "summary": "F19 says about 11 hours of fuel but F15 says Generator B shut down at 04:10, about 78 minutes after coming online (assumes the shutdown was fuel-related, which the facts do not say)",
+      "what_would_resolve_it": "Fuel vendor gauge reading vs Facilities estimate"
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "Not determined: the facts say it is under investigation; storm and transformer explanations conflict.",
+  "not_supported_by_evidence": [
+    "Whether any customer data was lost",
+    "Why the Substation 7 transformer failed",
+    "Any SLA credit or financial penalty",
+    "Why Generator B shut down at 04:10"
+  ],
+  "overall_confidence": "low",
+  "conclusion": "Building 2 lost utility power on 14 March and the generators carried the load, but the source contradicts itself on start time, restoration time, customer and premium counts, approver, UPS runtime, fuel level and cause. The root cause is not established and the headline numbers cannot be relied on until raw logs are checked."
+}

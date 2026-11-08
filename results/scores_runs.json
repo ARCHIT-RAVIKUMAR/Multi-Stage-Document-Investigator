@@ -1,44 +1,176 @@
 [
   {
-    "run": "temp_default/run_1",
-    "issues": [],
+    "run": "temp_0.0\\run_1",
+    "issues": [
+      "MALFORMED_ITEMS (ignored, minor): 2 empty entries in stage 1/2 lists",
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "MISSED_CONTRADICTION C7",
+      "MISSED_CONTRADICTION C8",
+      "PICKED_SIDE C1: only '02:14' stated as established",
+      "PICKED_SIDE C3: only '312' stated as established"
+    ],
     "fabricated": 0,
-    "recall": 1.0,
-    "missed": [],
+    "recall": 0.5,
+    "missed": [
+      "C1",
+      "C3",
+      "C7",
+      "C8"
+    ],
     "false_positive_candidates": 0
   },
   {
-    "run": "temp_default/run_2",
+    "run": "temp_0.0\\run_2",
     "issues": [
+      "MALFORMED_ITEMS (ignored, minor): 2 empty entries in stage 1/2 lists",
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "PICKED_SIDE C3: only '312' stated as established",
+      "PICKED_SIDE C5: only '15 minutes' stated as established",
+      "PICKED_SIDE C8: only '41' stated as established"
+    ],
+    "fabricated": 0,
+    "recall": 0.75,
+    "missed": [
+      "C1",
+      "C3"
+    ],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_0.0\\run_3",
+    "issues": [
+      "MALFORMED_ITEMS (ignored, minor): 2 empty entries in stage 1/2 lists",
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "PICKED_SIDE C1: only '02:14' stated as established",
+      "PICKED_SIDE C3: only '312' stated as established",
       "PICKED_SIDE C5: only '15 minutes' stated as established"
     ],
     "fabricated": 0,
-    "recall": 1.0,
-    "missed": [],
-    "false_positive_candidates": 1
-  },
-  {
-    "run": "temp_default/run_3",
-    "issues": [],
-    "fabricated": 0,
-    "recall": 1.0,
-    "missed": [],
+    "recall": 0.75,
+    "missed": [
+      "C1",
+      "C3"
+    ],
     "false_positive_candidates": 0
   },
   {
-    "run": "temp_default/run_4",
-    "issues": [],
+    "run": "temp_0.7\\run_1",
+    "issues": [
+      "FABRICATED_QUOTE F16: '02:52 - Failover was approved by Daniel Okafor, Operations Lead.'",
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "MISSED_CONTRADICTION C7",
+      "MISSED_CONTRADICTION C8",
+      "PICKED_SIDE C4: only 'priya raman' stated as established",
+      "PICKED_SIDE C5: only '15 minutes' stated as established"
+    ],
+    "fabricated": 1,
+    "recall": 0.5,
+    "missed": [
+      "C1",
+      "C3",
+      "C7",
+      "C8"
+    ],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_0.7\\run_2",
+    "issues": [
+      "MALFORMED_ITEMS (ignored, minor): 2 empty entries in stage 1/2 lists",
+      "FABRICATED_QUOTE F36: 'The root cause is still under investigation.'",
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "MISSED_CONTRADICTION C4",
+      "MISSED_CONTRADICTION C6",
+      "MISSED_CONTRADICTION C7",
+      "MISSED_CONTRADICTION C8",
+      "PICKED_SIDE C1: only '02:14' stated as established",
+      "PICKED_SIDE C3: only '312' stated as established",
+      "PICKED_SIDE C6: only '11 hours' stated as established"
+    ],
+    "fabricated": 1,
+    "recall": 0.25,
+    "missed": [
+      "C1",
+      "C3",
+      "C4",
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_0.7\\run_3",
+    "issues": [
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C3",
+      "MISSED_CONTRADICTION C4",
+      "MISSED_CONTRADICTION C6",
+      "MISSED_CONTRADICTION C7",
+      "MISSED_CONTRADICTION C8",
+      "PICKED_SIDE C1: only '02:14' stated as established",
+      "PICKED_SIDE C3: only '312' stated as established",
+      "PICKED_SIDE C4: only 'priya raman' stated as established",
+      "PICKED_SIDE C5: only '15 minutes' stated as established"
+    ],
     "fabricated": 0,
-    "recall": 1.0,
-    "missed": [],
+    "recall": 0.25,
+    "missed": [
+      "C1",
+      "C3",
+      "C4",
+      "C6",
+      "C7",
+      "C8"
+    ],
     "false_positive_candidates": 1
   },
   {
-    "run": "temp_default/run_5",
-    "issues": [],
+    "run": "temp_1.0\\run_1",
+    "issues": [
+      "MISSED_CONTRADICTION C6",
+      "MISSED_CONTRADICTION C7",
+      "MISSED_CONTRADICTION C8",
+      "PICKED_SIDE C5: only '15 minutes' stated as established",
+      "PICKED_SIDE C6: only '11 hours' stated as established",
+      "PICKED_SIDE C8: only '41' stated as established"
+    ],
     "fabricated": 0,
-    "recall": 1.0,
-    "missed": [],
+    "recall": 0.625,
+    "missed": [
+      "C6",
+      "C7",
+      "C8"
+    ],
+    "false_positive_candidates": 0
+  },
+  {
+    "run": "temp_1.0\\run_2",
+    "issues": [
+      "MISSED_CONTRADICTION C1",
+      "MISSED_CONTRADICTION C2",
+      "MISSED_CONTRADICTION C3",
+      "MISSED_CONTRADICTION C6",
+      "MISSED_CONTRADICTION C7",
+      "PICKED_SIDE C1: only '02:14' stated as established",
+      "PICKED_SIDE C2: only '06:34' stated as established",
+      "PICKED_SIDE C3: only '312' stated as established",
+      "PICKED_SIDE C5: only '15 minutes' stated as established"
+    ],
+    "fabricated": 0,
+    "recall": 0.375,
+    "missed": [
+      "C1",
+      "C2",
+      "C3",
+      "C6",
+      "C7"
+    ],
     "false_positive_candidates": 0
   }
 ]

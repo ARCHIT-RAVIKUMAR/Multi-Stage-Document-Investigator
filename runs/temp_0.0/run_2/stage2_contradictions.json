@@ -1,0 +1,64 @@
+{
+  "contradictions": [
+    {
+      "id": "C1",
+      "fact_ids": [
+        "F2",
+        "F14"
+      ],
+      "topic": "UPS duration",
+      "description": "F2 states the UPS carried the load for 15 minutes before generators took over, while F14 states the UPS carried the load for only 9 minutes before Generator B was started.",
+      "confidence": "high"
+    },
+    {
+      "id": "C2",
+      "fact_ids": [
+        "F3",
+        "F18"
+      ],
+      "topic": "Service restoration time",
+      "description": "F3 claims normal service was restored at 06:34, whereas F18 claims the utility feed was restored and service confirmed normal at 08:05.",
+      "confidence": "high"
+    },
+    {
+      "id": "C3",
+      "fact_ids": [
+        "F6",
+        "F15"
+      ],
+      "topic": "Failover approval",
+      "description": "F6 says failover to Generator B was approved by Priya Raman, Operations Lead, while F15 says failover was approved by Daniel Okafor, Operations Lead.",
+      "confidence": "high"
+    },
+    {
+      "id": "C4",
+      "fact_ids": [
+        "F21",
+        "F27"
+      ],
+      "topic": "Generator B fuel capacity",
+      "description": "F21 claims Generator B\u2019s tank held roughly 11 hours of runtime at the start of the incident, whereas F27 claims the tank was at 20 percent, enough for about 3 hours.",
+      "confidence": "high"
+    },
+    {
+      "id": "C5",
+      "fact_ids": [
+        "F7",
+        "F31"
+      ],
+      "topic": "Cause of fault",
+      "description": "F7 states the utility fault was triggered by a storm, while F31 reports clear skies, no precipitation, and no wind above 12 km/h on the night of 13 to 14 March.",
+      "confidence": "high"
+    },
+    {
+      "id": "C6",
+      "fact_ids": [
+        "F24",
+        "F35"
+      ],
+      "topic": "Premium tier customer count",
+      "description": "F24 reports 41 premium tier customers were affected, whereas F35 reports 38 premium-tier customers were affected.",
+      "confidence": "high"
+    }
+  ]
+}

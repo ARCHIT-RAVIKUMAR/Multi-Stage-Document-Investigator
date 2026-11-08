@@ -1,0 +1,1 @@
+Produced by Claude inside a chat session (no API, no temperature control, default sampling). Stage 1 read the document; stage 2 was written from the facts JSON only; stage 3 from facts+contradictions only. Written by hand into this file layout, not run through pipeline.py. Not a temperature sweep. Single run.

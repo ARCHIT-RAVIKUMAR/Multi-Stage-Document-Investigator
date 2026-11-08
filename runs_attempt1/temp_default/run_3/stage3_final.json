@@ -1,0 +1,97 @@
+{
+  "established_findings": [
+    {
+      "text": "Building 1 was not affected.",
+      "fact_ids": [
+        "F9"
+      ]
+    },
+    {
+      "text": "Both generators are rated at 2 MW.",
+      "fact_ids": [
+        "F16"
+      ]
+    },
+    {
+      "text": "The utility provider was notified at 03:05.",
+      "fact_ids": [
+        "F13"
+      ]
+    },
+    {
+      "text": "Generator B shut down at 04:10 and Generator A took the load.",
+      "fact_ids": [
+        "F14"
+      ]
+    },
+    {
+      "text": "A refuel truck was dispatched at 03:40.",
+      "fact_ids": [
+        "F21"
+      ]
+    },
+    {
+      "text": "Support received 1,208 tickets.",
+      "fact_ids": [
+        "F19"
+      ]
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "contradiction_id": "X1",
+      "summary": "F1 says 02:14 but F10 says the alarm was raised at 02:41",
+      "what_would_resolve_it": "Raw utility/monitoring logs with timestamps"
+    },
+    {
+      "contradiction_id": "X2",
+      "summary": "F3 says restored at 06:34 but F15 says restored at 08:05",
+      "what_would_resolve_it": "Utility and service-restoration logs"
+    },
+    {
+      "contradiction_id": "X3",
+      "summary": "F5 says 312 customers but F18 says 213",
+      "what_would_resolve_it": "Billing or support records of affected accounts"
+    },
+    {
+      "contradiction_id": "X4",
+      "summary": "F6 names Priya Raman but F12 names Daniel Okafor",
+      "what_would_resolve_it": "Change-approval record or on-call log"
+    },
+    {
+      "contradiction_id": "X5",
+      "summary": "F2 says 15 minutes but F11 says 9 minutes",
+      "what_would_resolve_it": "UPS controller event log"
+    },
+    {
+      "contradiction_id": "X6",
+      "summary": "F17 says about 11 hours but F20 says 20 percent, about 3 hours",
+      "what_would_resolve_it": "Fuel vendor gauge reading vs Facilities estimate"
+    },
+    {
+      "contradiction_id": "X7",
+      "summary": "F7 says a storm triggered the fault but F22 says clear skies and no precipitation",
+      "what_would_resolve_it": "Utility provider incident report and independent weather data"
+    },
+    {
+      "contradiction_id": "X8",
+      "summary": "F7 says a storm triggered the fault but F23 attributes it to a transformer failure",
+      "what_would_resolve_it": "Utility provider incident report and independent weather data"
+    },
+    {
+      "contradiction_id": "X9",
+      "summary": "F18 says 41 premium customers but F24 says 38",
+      "what_would_resolve_it": "Customer tier list for affected accounts"
+    }
+  ],
+  "root_cause_determined": false,
+  "root_cause_statement": "Not determined; facts state the root cause is under investigation.",
+  "not_supported_by_evidence": [
+    "Whether any customer data was lost",
+    "Why Generator B shut down at 04:10",
+    "Any SLA credit or financial penalty",
+    "What caused the transformer failure at Substation 7"
+  ],
+  "overall_confidence": "low",
+  "conclusion": "The document reports a power loss at Building 2 with generator backup, but nine flagged conflicts cover timing, counts, approver, UPS runtime, fuel and cause. No root cause is established. Reconciliation needs the underlying logs."
+}

@@ -1,0 +1,96 @@
+{
+  "contradictions": [
+    {
+      "id": "X1",
+      "fact_ids": [
+        "F1",
+        "F11"
+      ],
+      "topic": "outage start time",
+      "description": "F1 says power was lost at 02:14 but F11 shows the alarm at 02:41",
+      "confidence": "high"
+    },
+    {
+      "id": "X2",
+      "fact_ids": [
+        "F3",
+        "F4",
+        "F16"
+      ],
+      "topic": "restoration time",
+      "description": "F3 says service restored at 06:34 (outage 4h20m per F4) but F16 says utility feed restored and service confirmed normal at 08:05",
+      "confidence": "high"
+    },
+    {
+      "id": "X3",
+      "fact_ids": [
+        "F5",
+        "F22"
+      ],
+      "topic": "customers affected",
+      "description": "F5 says 312 customers affected but F22 says 213",
+      "confidence": "high"
+    },
+    {
+      "id": "X4",
+      "fact_ids": [
+        "F6",
+        "F13"
+      ],
+      "topic": "failover approver",
+      "description": "F6 says Priya Raman approved the failover but F13 says Daniel Okafor",
+      "confidence": "high"
+    },
+    {
+      "id": "X5",
+      "fact_ids": [
+        "F2",
+        "F12"
+      ],
+      "topic": "UPS runtime",
+      "description": "F2 says the UPS carried the load for 15 minutes but F12 says 9 minutes",
+      "confidence": "high"
+    },
+    {
+      "id": "X6",
+      "fact_ids": [
+        "F19",
+        "F25"
+      ],
+      "topic": "Generator B fuel",
+      "description": "F19 says roughly 11 hours of runtime but F25 says 20 percent, about 3 hours",
+      "confidence": "high"
+    },
+    {
+      "id": "X7",
+      "fact_ids": [
+        "F7",
+        "F28",
+        "F29"
+      ],
+      "topic": "cause of utility fault",
+      "description": "F7 says a storm triggered the fault but F28 records clear skies and F29 attributes it to a transformer failure",
+      "confidence": "high"
+    },
+    {
+      "id": "X8",
+      "fact_ids": [
+        "F22",
+        "F31"
+      ],
+      "topic": "premium customers",
+      "description": "F22 says 41 premium customers but F31 says 38",
+      "confidence": "high"
+    },
+    {
+      "id": "X9",
+      "fact_ids": [
+        "F19",
+        "F15"
+      ],
+      "topic": "Generator B runtime vs shutdown",
+      "description": "F19 says about 11 hours of fuel but F15 says Generator B shut down at 04:10, about 78 minutes after coming online (assumes the shutdown was fuel-related, which the facts do not say)",
+      "confidence": "low"
+    }
+  ]
+}

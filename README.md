@@ -46,3 +46,18 @@ Scores for the 5 in-session runs are in `results/summary_runs.md`. `FAILURE_ANAL
 
 ## One-command finish
 `./run_all.sh` runs the temperature sweep, scores it, writes `REPORT.md`, and writes `FAILURE_ANALYSIS.md` from the real results.
+
+## Running with a live model
+Anthropic: `export ANTHROPIC_API_KEY=...` then `./run_all.sh`
+
+Groq (free tier):
+```
+pip install openai && export LLM_API_KEY=your_groq_key
+./run_all.sh --provider openai --base-url https://api.groq.com/openai/v1 --model llama-3.1-8b-instant
+```
+Gemini (free tier):
+```
+pip install openai && export LLM_API_KEY=your_gemini_key
+./run_all.sh --provider openai --base-url https://generativelanguage.googleapis.com/v1beta/openai/ --model gemini-2.0-flash
+```
+This writes `runs/temp_0.0/`, `temp_0.7/`, `temp_1.0/` (3 runs each), re-scores everything, and regenerates `FAILURE_ANALYSIS.md`.

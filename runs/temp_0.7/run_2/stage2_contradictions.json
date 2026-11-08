@@ -1,0 +1,24 @@
+{
+  "contradictions": [
+    {
+      "id": "C1",
+      "fact_ids": [
+        "F2",
+        "F13"
+      ],
+      "topic": "UPS duration",
+      "description": "Fact F2 states the battery UPS carried the load for 15 minutes before generators took over, while Fact F13 reports the UPS batteries were exhausted after 9 minutes and Generator B was started.",
+      "confidence": "high"
+    },
+    {
+      "id": "C2",
+      "fact_ids": [
+        "F3",
+        "F18"
+      ],
+      "topic": "Service restoration time",
+      "description": "Fact F3 claims normal service was restored at 06:34, whereas Fact F18 indicates the utility feed was restored and service confirmed normal for all halls at 08:05.",
+      "confidence": "high"
+    }
+  ]
+}

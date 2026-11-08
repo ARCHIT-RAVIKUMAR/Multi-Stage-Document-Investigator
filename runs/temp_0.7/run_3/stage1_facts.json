@@ -1,0 +1,337 @@
+{
+  "facts": [
+    {
+      "id": "F1",
+      "claim": "On 14 March, the Larkspur Data Center (Building 2) lost utility power at 02:14 local time.",
+      "category": "time",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "On 14 March, the Larkspur Data Center (Building 2) lost utility power at 02:14 local time."
+    },
+    {
+      "id": "F2",
+      "claim": "The battery UPS carried the load for 15 minutes before generators took over.",
+      "category": "duration",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "The battery UPS carried the load for 15 minutes before generators took over."
+    },
+    {
+      "id": "F3",
+      "claim": "Normal service was restored at 06:34.",
+      "category": "time",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "Normal service was restored at 06:34"
+    },
+    {
+      "id": "F4",
+      "claim": "Total outage was 4 hours 20 minutes.",
+      "category": "duration",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "giving a total outage of 4 hours 20 minutes."
+    },
+    {
+      "id": "F5",
+      "claim": "312 customers were affected.",
+      "category": "count",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "In total, 312 customers were affected."
+    },
+    {
+      "id": "F6",
+      "claim": "Failover to Generator B was approved by Priya Raman, Operations Lead.",
+      "category": "person",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "Failover to Generator B was approved by Priya Raman, Operations Lead."
+    },
+    {
+      "id": "F7",
+      "claim": "The utility fault was triggered by a storm.",
+      "category": "cause",
+      "sections": [
+        "1. Executive Summary"
+      ],
+      "quote": "The utility fault was triggered by a storm."
+    },
+    {
+      "id": "F8",
+      "claim": "Building 2 opened in 2017.",
+      "category": "date",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "Building 2 opened in 2017"
+    },
+    {
+      "id": "F9",
+      "claim": "Building 2 houses four data halls with roughly 1,900 racks.",
+      "category": "count",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "houses four data halls with roughly 1,900 racks."
+    },
+    {
+      "id": "F10",
+      "claim": "Building 1 was not affected by the incident.",
+      "category": "other",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "Building 1, on the same campus, was not affected by the incident."
+    },
+    {
+      "id": "F11",
+      "claim": "The visitor parking lot has 14 additional spaces.",
+      "category": "count",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "now has 14 additional spaces."
+    },
+    {
+      "id": "F12",
+      "claim": "The campus is staffed 24/7 by a rotating team of operations engineers.",
+      "category": "time",
+      "sections": [
+        "2. Facility Background"
+      ],
+      "quote": "The campus is staffed 24/7 by a rotating team of operations engineers."
+    },
+    {
+      "id": "F13",
+      "claim": "At 02:41, monitoring raised a utility feed lost alarm for Building 2.",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:41 - Monitoring raised a utility feed lost alarm for Building 2."
+    },
+    {
+      "id": "F14",
+      "claim": "At 02:50, UPS batteries had carried the load for 9 minutes before exhausting and Generator B was started.",
+      "category": "duration",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:50 - UPS batteries, which had carried the load for 9 minutes, were exhausted and Generator B was started."
+    },
+    {
+      "id": "F15",
+      "claim": "At 02:52, Generator B online. Failover was approved by Daniel Okafor, Operations Lead.",
+      "category": "person",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "02:52 - Generator B online. Failover was approved by Daniel Okafor, Operations Lead."
+    },
+    {
+      "id": "F16",
+      "claim": "At 03:05, utility provider notified.",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "03:05 - Utility provider notified."
+    },
+    {
+      "id": "F17",
+      "claim": "At 04:10, Generator B shut down; Generator A took the load.",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "04:10 - Generator B shut down; Generator A took the load."
+    },
+    {
+      "id": "F18",
+      "claim": "At 08:05, utility feed restored and service confirmed normal for all halls.",
+      "category": "time",
+      "sections": [
+        "3. Timeline"
+      ],
+      "quote": "08:05 - Utility feed restored and service confirmed normal for all halls."
+    },
+    {
+      "id": "F19",
+      "claim": "Both generators are rated at 2 MW.",
+      "category": "equipment",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "Both generators are rated at 2 MW."
+    },
+    {
+      "id": "F20",
+      "claim": "The UPS system is rated for 15 minutes at full load.",
+      "category": "duration",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "The UPS system is rated for 15 minutes at full load."
+    },
+    {
+      "id": "F21",
+      "claim": "Generator B's tank held roughly 11 hours of runtime at the start of the incident.",
+      "category": "duration",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "Generator B's tank held roughly 11 hours of runtime at the start of the incident."
+    },
+    {
+      "id": "F22",
+      "claim": "Generator A was last serviced in January.",
+      "category": "date",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "Generator A was last serviced in January."
+    },
+    {
+      "id": "F23",
+      "claim": "UPS battery strings were installed in 2019.",
+      "category": "date",
+      "sections": [
+        "4. Power Systems"
+      ],
+      "quote": "The UPS battery strings were installed in 2019."
+    },
+    {
+      "id": "F24",
+      "claim": "213 customers experienced degraded or no service.",
+      "category": "count",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "A total of 213 customers experienced degraded or no service"
+    },
+    {
+      "id": "F25",
+      "claim": "41 customers were premium tier.",
+      "category": "count",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "of which 41 were premium tier."
+    },
+    {
+      "id": "F26",
+      "claim": "Support received 1,208 tickets during and after the event.",
+      "category": "count",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "Support received 1,208 tickets during and after the event."
+    },
+    {
+      "id": "F27",
+      "claim": "Median first-response time to tickets was 22 minutes.",
+      "category": "duration",
+      "sections": [
+        "5. Customer Impact"
+      ],
+      "quote": "The median first-response time to tickets was 22 minutes."
+    },
+    {
+      "id": "F28",
+      "claim": "Generator B's tank was at 20 percent at the start of the incident, enough for about 3 hours.",
+      "category": "percentage",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "Generator B's tank at 20 percent at the start of the incident, enough for about 3 hours."
+    },
+    {
+      "id": "F29",
+      "claim": "A refuel truck was dispatched at 03:40.",
+      "category": "time",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "A refuel truck was dispatched at 03:40."
+    },
+    {
+      "id": "F30",
+      "claim": "Utility provider notified at 03:05.",
+      "category": "time",
+      "sections": [
+        "6. Recovery Notes"
+      ],
+      "quote": "The utility provider was notified at 03:05."
+    },
+    {
+      "id": "F31",
+      "claim": "Weather station recorded clear skies, no precipitation, and no wind above 12 km/h on the night of 13 to 14 March.",
+      "category": "weather",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "The regional weather station recorded clear skies, no precipitation, and no wind above 12 km/h on the night of 13 to 14 March."
+    },
+    {
+      "id": "F32",
+      "claim": "Utility provider attributed feed loss to transformer failure at Substation 7.",
+      "category": "cause",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "The utility provider attributed the feed loss to a transformer failure at Substation 7."
+    },
+    {
+      "id": "F33",
+      "claim": "Sunrise on 14 March was at 06:12.",
+      "category": "time",
+      "sections": [
+        "7. Weather and Utility Context"
+      ],
+      "quote": "Sunrise on 14 March was at 06:12."
+    },
+    {
+      "id": "F34",
+      "claim": "Building 2 lost utility power on 14 March.",
+      "category": "date",
+      "sections": [
+        "9. Archive Summary"
+      ],
+      "quote": "Building 2 lost utility power on 14 March."
+    },
+    {
+      "id": "F35",
+      "claim": "38 premium-tier customers were affected.",
+      "category": "count",
+      "sections": [
+        "9. Archive Summary"
+      ],
+      "quote": "38 premium-tier customers were affected."
+    },
+    {
+      "id": "F36",
+      "claim": "Both generators are rated at 2 MW each.",
+      "category": "equipment",
+      "sections": [
+        "9. Archive Summary"
+      ],
+      "quote": "Both generators are rated at 2 MW each."
+    },
+    {
+      "id": "F37",
+      "claim": "Root cause is under investigation.",
+      "category": "cause",
+      "sections": [
+        "9. Archive Summary"
+      ],
+      "quote": "root cause is still under investigation."
+    }
+  ]
+}
