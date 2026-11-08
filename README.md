@@ -40,9 +40,11 @@ python make_report.py runs/temp_0.0/run_1
 `--mock` just tests the code without calling a model.
 
 ## About the included runs
-`runs/temp_default/run_1` to `run_5` were all produced by Claude working through the three stages inside a chat session, not through the API. Each is a single run at default sampling (no temperature control), so **there is no temperature sweep in this repo yet**. Stage 2 saw only the facts JSON and stage 3 only facts plus contradictions. The JSON was written by hand into the pipeline's file layout. See each run's `PROVENANCE.txt`. `python pipeline.py` writes the real sweep into `runs/temp_0.0/` etc.
-
-Scores for the 5 in-session runs are in `results/summary_runs.md`. `FAILURE_ANALYSIS.md` contains the generated log plus a manual review. It reports only what actually happened and does not reach 3 failures.
+- `runs/temp_0.0`, `runs/temp_0.7`, `runs/temp_1.0` are live runs on Groq (`openai/gpt-oss-20b`): 3, 3 and 2 runs. The third run at 1.0 hit the free-tier daily token limit and was removed. Every stage's JSON is saved there.
+- `runs_attempt1/` is an earlier live attempt that failed on invalid JSON and empty replies, kept as evidence.
+- `runs/temp_default/run_1` to `run_5` were written by Claude inside a chat session, not through the API (see each `PROVENANCE.txt`). They are not part of the temperature comparison.
+- `REPORT.md` is the final report generated from `runs/temp_0.0/run_1`.
+- `ANALYSIS.md` has the temperature comparison and three incorrect conclusions with causes. `FAILURE_ANALYSIS.md` is the auto-generated triage list.
 
 ## One-command finish
 `./run_all.sh` runs the temperature sweep, scores it, writes `REPORT.md`, and writes `FAILURE_ANALYSIS.md` from the real results.
@@ -53,7 +55,7 @@ Anthropic: `export ANTHROPIC_API_KEY=...` then `./run_all.sh`
 Groq (free tier):
 ```
 pip install openai && export LLM_API_KEY=your_groq_key
-./run_all.sh --provider openai --base-url https://api.groq.com/openai/v1 --model llama-3.1-8b-instant
+./run_all.sh --provider openai --base-url https://api.groq.com/openai/v1 --model openai/gpt-oss-20b
 ```
 Gemini (free tier):
 ```

@@ -28,7 +28,7 @@ def diagnose(run, issue):
             return ("merged conflicting facts", "Stage 1 put both conflicting values into one fact, hiding the disagreement from stage 2.")
         return ("missed contradiction", "Both sides were extracted as separate facts, but stage 2 did not flag them.")
     if kind == "FABRICATED_QUOTE":
-        return ("bad extraction (hallucinated fact)", "Stage 1 produced a quote that is not in the source document; later stages inherit it.")
+        return ("non-verbatim quote", "Stage 1 quote is not an exact copy of the source text. Check the fact against the document: it may be a real fact with an altered quote, or an invented one.")
     if kind in ("OVERREACH", "PICKED_SIDE"):
         return ("final-stage overreach", "Stage 3 stated as established something the document leaves open or contradicts.")
     if kind == "DROPPED_CONFLICT":
@@ -53,7 +53,7 @@ for p in cats_first:
 for p in picked:
     if p not in chosen: chosen.append(p)
 
-out = ["# Failure Analysis Log", "", "Generated from the actual run data by `make_failure_log.py`.", "",
+out = ["# Failure Analysis Log", "", "Auto-generated triage from the actual run data (`make_failure_log.py`). Categories are heuristic; the verified analysis with causes is in `ANALYSIS.md`.", "",
        "## Temperature summary", summary, "", f"Total flagged issues across all runs: {sum(len(s['issues']) for s in scores)}", ""]
 if len(chosen) < 3:
     out += [f"**Only {len(chosen)} distinct failure(s) were found in these runs**, fewer than the 3 the task asks for. "
